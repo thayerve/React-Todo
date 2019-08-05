@@ -1,14 +1,22 @@
 import React from 'react';
+import TodoList from './components/TodoComponents/TodoList';
 
 class App extends React.Component {
   constructor(){
   super();
-  this.state = {};
+  this.state = {
+    todos: [
+      {task: 'Build App',
+      id: 1528817084358,
+      completed: false
+    }
+    ]
+  };
   }
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <TodoList todos={this.state.todos} />
       </div>
     );
   }
